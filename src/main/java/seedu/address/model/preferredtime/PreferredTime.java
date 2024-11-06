@@ -19,7 +19,9 @@ public class PreferredTime {
 
     public static final String MESSAGE_CONSTRAINTS =
             "PreferredTime should consists of start and end Time in the format 'HHmm-HHmm'.\n"
-            + "Time should be in range from 0000 to 2359.";
+            + "Time HHmm should be in range from 0000 to 2359.\n"
+            + "The start is expected to be earlier than the end while overnight not allowed.\n"
+            + "e.g. 2300-0100 is currently not supported.";
     public static final String VALIDATION_REGEX = "(\\d{4})-(\\d{4})$";
     public static final String TIME_CHECK = "^([01][0-9]|2[0-3])[0-5][0-9]$";
     public static final Pattern VALIDATED_PATTERN = Pattern.compile(VALIDATION_REGEX);
