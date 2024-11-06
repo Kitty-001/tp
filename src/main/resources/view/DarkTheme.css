@@ -340,6 +340,7 @@
 #tags {
     -fx-hgap: 7;
     -fx-vgap: 3;
+    -fx-padding: 2.5;
 }
 
 #tags .label {
@@ -354,6 +355,7 @@
 #games {
     -fx-hgap: 7;
     -fx-vgap: 3;
+    -fx-padding: 2.5;
 }
 
 #games .label   {
@@ -369,6 +371,7 @@
 #preferredTimes {
     -fx-hgap: 7;
     -fx-vgap: 3;
+    -fx-padding: 2.5;
 }
 
 #preferredTimes .label {
