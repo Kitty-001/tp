@@ -144,8 +144,11 @@ public class HelpWindow extends UiPart<Stage> {
                         new HelpCommand("Delete", "`delete INDEX`"),
                         new HelpCommand("Edit", "`edit INDEX [n/NAME] [p/PHONE_NUMBER] "
                                 + "[e/EMAIL] [a/ADDRESS] [g/GAME]… [t/TAG]… [pt/TIME]…​`"),
+                        new HelpCommand("AddGame", "`addgame INDEX g/GAME [u/USERNAME]"
+                                + " [s/SKILL_LEVEL] [r/ROLE]`"),
                         new HelpCommand("EditGame", "`editgame INDEX g/GAME [u/USERNAME]"
                                 + " [s/SKILL_LEVEL] [r/ROLE]`"),
+                        new HelpCommand("DeleteGame", "`deletegame INDEX g/GAME`"),
                         new HelpCommand("FavGame", "`favgame INDEX g/GAME`"),
                         new HelpCommand("UnFavGame", "`unfavgame INDEX g/GAME`"),
                         new HelpCommand("Find", "`find KEYWORD [MORE_KEYWORDS]…` \ne.g., "
@@ -157,7 +160,8 @@ public class HelpWindow extends UiPart<Stage> {
                         new HelpCommand("Undo", "`undo`"),
                         new HelpCommand("Help", "`help`"),
                         new HelpCommand("Save", "`save`"),
-                        new HelpCommand("Load", "`load`")
+                        new HelpCommand("Load", "`load`"),
+                        new HelpCommand("Exit", "`exit`")
                 );
 
         // Add data to the table
