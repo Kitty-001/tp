@@ -340,7 +340,7 @@
 #tags {
     -fx-hgap: 7;
     -fx-vgap: 3;
-    -fx-padding: 2.5;
+    -fx-padding: 1.5;
 }
 
 #tags .label {
@@ -352,10 +352,11 @@
     -fx-background-radius: 2;
     -fx-font-size: 11;
 }
+
 #games {
     -fx-hgap: 7;
     -fx-vgap: 3;
-    -fx-padding: 2.5;
+    -fx-padding: 1.5;
 }
 
 #games .label   {
@@ -371,7 +372,7 @@
 #preferredTimes {
     -fx-hgap: 7;
     -fx-vgap: 3;
-    -fx-padding: 2.5;
+    -fx-padding: 1.5;
 }
 
 #preferredTimes .label {

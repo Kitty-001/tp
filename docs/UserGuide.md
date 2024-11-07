@@ -252,7 +252,8 @@ Format: `findtime RANGE [MORE_RANGE]`
 <box type="tip" seamless>
 
 **Tip:** RANGE should be in the form of "HHmm-HHmm" with no extra space 
-and `HHmm` should be valid 0000-2359 4-digit number, while the first time should be before the second time
+and `HHmm` should be valid 0000-2359 4-digit number, while the first time should be before the second time.
+Overnight ranges are not accepted, e.g. `2300-0100` is not accepted.
 </box>
 
 * The search is border-insensitive. e.g. `1200-1300` will not match `1300-1400`
