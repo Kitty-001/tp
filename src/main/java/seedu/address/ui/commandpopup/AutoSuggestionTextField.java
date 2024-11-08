@@ -40,6 +40,7 @@ public class AutoSuggestionTextField extends TextField {
     private final SortedSet<String> commandSet;
     //popup GUI
     private PopupControl suggestionPopup;
+    @FXML
     private ListView<TextFlow> suggestionList;
     private CommandBox commandBox;
     private ObservableList<TextFlow> textFlowItems;
@@ -219,8 +220,8 @@ public class AutoSuggestionTextField extends TextField {
         suggestionPopup.show(this, location.getX(), location.getY());
         double height = calculateListViewHeight(textFlowItems);
         double width = calculateListViewWidth(textFlowItems);
-        suggestionList.setPrefHeight(height);
-        suggestionList.setMaxHeight(height);
+        suggestionList.setPrefHeight(height + 10);
+        suggestionList.setMaxHeight(height + 10);
         suggestionList.setPrefWidth(width);
     }
 
@@ -247,11 +248,10 @@ public class AutoSuggestionTextField extends TextField {
      * @return The calculated total height.
      */
     private double calculateListViewHeight(ObservableList<TextFlow> items) {
-        double totalHeight = 0;
+        double totalHeight = 1;
         for (TextFlow item : items) {
-            totalHeight += 50; // 10 pixels padding
+            totalHeight += 46;
         }
-
         return totalHeight;
     }
 
@@ -264,11 +264,11 @@ public class AutoSuggestionTextField extends TextField {
     private double calculateListViewWidth(ObservableList<TextFlow> items) {
         double maxWidth = 0;
         for (TextFlow item : items) {
-            maxWidth = Math.max(maxWidth, item.prefWidth(-1));
+            maxWidth = Math.max(maxWidth, item.prefWidth(0));
         }
 
         // Add some padding
-        maxWidth += 20; // 10 pixels padding on each side
+        maxWidth += 0; // 10 pixels padding on each side
 
         // Set a minimum width (at least as wide as the TextField)
         double minWidth = this.getWidth();
@@ -347,7 +347,7 @@ public class AutoSuggestionTextField extends TextField {
             //label with graphic (TextFlow) to highlight matching prefix
             Label entryLabel = new Label();
             entryLabel.setGraphic(buildTextFlow(result, searchRequest));
-            entryLabel.setPrefHeight(10);
+            entryLabel.setPrefHeight(20);
 
         }
     }
